@@ -1,13 +1,13 @@
-import java.util.*;
+for(auto edge: edges){
+adj[edge[0]].push_back(edge[1]);
+adj[edge[1]].push_back(edge[0]);
+}
+//Step-2: Find the Bob to root path
+vector<int> curr_path,bob_path;
+findBobPath(adj,bob,-1,curr_path,bob_path);
 
-class Solution {
-private boolean findBobPath(List<List<Integer>> adj, int bob, int parent, List<Integer> currPath, List<Integer> bobPath) {
-if (bob == 0) {
-bobPath.addAll(currPath);
-return true;
-}
-currPath.add(bob);
-for (int nbr : adj.get(bob)) {
-if (nbr != parent && findBobPath(adj, nbr, bob, currPath, bobPath)) {
-return true;
-}
+//Step-3: Update amount of half of the path nodes to 0
+int size = bob_path.size();
+int i;
+for(i=0;i<size/2;++i)
+amount[bob_path[i]]=0;
