@@ -11,3 +11,5 @@ if (nbr != parent && findBobPath(adj, nbr, bob, currPath, bobPath)) {
 return true;
 }
 }
+currPath.remove(currPath.size() - 1);
+return false;
