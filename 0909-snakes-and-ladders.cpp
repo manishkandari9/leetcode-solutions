@@ -13,3 +13,6 @@ return true;
 }
 currPath.remove(currPath.size() - 1);
 return false;
+}
+private int findMaxIncomeForAlice(List<List<Integer>> adj, int alice, int parent, int[] amount) {
+int maxIncome = Integer.MIN_VALUE;
