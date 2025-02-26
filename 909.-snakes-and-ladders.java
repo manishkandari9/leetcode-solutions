@@ -7,4 +7,3 @@ class Solution {
             return true;
         }
         currPath.add(bob);
-        for (int nbr : adj.get(bob)) {
